@@ -5,6 +5,7 @@ using namespace std;
 int ejercicio1(int);
 int ejercicio2(int,int,int);
 int ejercicio3(int);
+bool primos(int);
 
 int main(){
 int menu;
@@ -96,7 +97,27 @@ int ejercicio3(int y){
   int impar1;
   int impar2;
   for(int i=0;i<y;i++){
-    
+    if(primos(i)=true){
+      for (int j=i;j<i;j++ ){
+        if(primos(j)=true && primos(j)+primos(i)){
+          cout<<"los numeros son :"<<primos(i)<<"y:"<<primos(j)<<endl;
+        }
+      }
+
+    }
   }
+}
+ 
+
+bool primos(int numero){
+  int aux;
+  for(int cont=2;cont<numero;cont++)
+  {
+    aux=numero%cont;
+    if(aux==0)
+      return false;
+  }
+  return t rue;
+
 }
 
