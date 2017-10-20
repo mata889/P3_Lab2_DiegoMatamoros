@@ -3,8 +3,8 @@
 using namespace std;
 
 int ejercicio1(int);
-int ejercicio2();
-int ejercicio3();
+int ejercicio2(int,int,int);
+int ejercicio3(int);
 
 int main(){
 int menu;
@@ -24,19 +24,30 @@ do{
        cout<<"Ingrese un Numero:";
        cin>>numero1;
        cout<<"Su numero es:"<<ejercicio1(numero1)<<endl;
-          }
-    case 2:{}
+          }break;
+    case 2:{
+           int n;
+           int a;
+           int b;
+           cout<<"Cantidad de veces(n)"<<endl;
+            cin>>n;
+            cout<<"ingrese a"<<endl;
+            cin>> a;
+            cout<<"ingrese b"<<endl;
+            cin>>b;
+            cout<<"Suma de los numeros:"<<ejercicio2(a,b,n)<<endl;
+           }break;
     case 3:{
        int numero2;
        cout<<"introduzca un numero"<<endl;
        cin>>numero2;
-      if(numero2<150 && numero2%2==0){
+      if(numero2<150 && numero2%2==0 && numero2!=2){
   
         }else{
           cout<<"Porfavor introduzca un numero menor de 150"<<endl;
           }
-           }
-  }      
+           }break;
+    }      
     }while(menu!=4);
 return 0;  
 }
@@ -61,5 +72,31 @@ int ejercicio1(int x){
   return numeroSuma;
 }
 
+int ejercicio2(int a, int b,int n){
+int suma;
+  for(int i=2;i<=n;i++){
+    if(i%a==0 && i%b!=0 ){
+      suma+=i;
+    }
+    if(i%a!=0 && i%b==0 ){
+      suma+=i;
+    }
+    if(i%a==0 && i%b==0 ){
+      suma+=i;
+    }
+  }
+  return suma;
+}
 
+
+
+
+
+int ejercicio3(int y){
+  int impar1;
+  int impar2;
+  for(int i=0;i<y;i++){
+    
+  }
+}
 
