@@ -26,7 +26,16 @@ do{
        cout<<"Su numero es:"<<ejercicio1(numero1)<<endl;
           }
     case 2:{}
-    case 3:{}
+    case 3:{
+       int numero2;
+       cout<<"introduzca un numero"<<endl;
+       cin>>numero2;
+      if(numero2<150 && numero2%2==0){
+  
+        }else{
+          cout<<"Porfavor introduzca un numero menor de 150"<<endl;
+          }
+           }
   }      
     }while(menu!=4);
 return 0;  
@@ -37,14 +46,17 @@ return 0;
 
 int ejercicio1(int x){
   int numeroSuma;
-  int contador=2;
-  bool primo;
-  while((primo)&&(contador!=0)){
-  if( x % contador==0){
-    primo=false;
-    contador++;
-  }else{
-  numeroSuma+=contador;}
+  int cont;
+  for(int i=1;i<x;i++ ){
+    cont=0;
+    for(int j=2;j<=i;j++){
+      if(i%j==0 ){
+        cont++;
+      }
+      if(j==i && cont==1 ){
+        numeroSuma+=j;
+      }
+    }
   }
   return numeroSuma;
 }
