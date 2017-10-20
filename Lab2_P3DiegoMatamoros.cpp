@@ -43,7 +43,7 @@ do{
        cout<<"introduzca un numero"<<endl;
        cin>>numero2;
       if(numero2<150 && numero2%2==0 && numero2!=2){
-  
+        ejercicio3(numero2); 
         }else{
           cout<<"Porfavor introduzca un numero menor de 150"<<endl;
           }
@@ -97,10 +97,10 @@ int ejercicio3(int y){
   int impar1;
   int impar2;
   for(int i=0;i<y;i++){
-    if(primos(i)=true){
-      for (int j=i;j<i;j++ ){
-        if(primos(j)=true && primos(j)+primos(i)){
-          cout<<"los numeros son :"<<primos(i)<<"y:"<<primos(j)<<endl;
+    if(primos(i)==true){
+      for (int j=0;j<y;j++ ){
+        if(primos(j)==true && i!=j && (j)+(i)==y && i!=1 && j!=1){
+          cout<<"la combinacion de los numeros son:"<<i<< " y :"<<j<<endl;
         }
       }
 
@@ -117,7 +117,7 @@ bool primos(int numero){
     if(aux==0)
       return false;
   }
-  return t rue;
+  return true;
 
 }
 
